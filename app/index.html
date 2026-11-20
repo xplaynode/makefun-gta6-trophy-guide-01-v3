@@ -3,23 +3,68 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Leonida Night Ledger — GTA VI Trophy Guide &amp; Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header id="topbar">
+  <div class="brand">
+    <h1>Leonida Night Ledger</h1>
+    <p class="tagline">GTA VI trophy guide &amp; tracker — all 55 PS5 trophies, cited step by step. Works fully offline.</p>
+  </div>
+  <div class="savebox">
+    <p id="progress-line">0 of 55 earned</p>
+    <p id="points-line">0 / 1,350 PSN points</p>
+    <div class="save-actions">
+      <button id="export-btn" type="button">Export save</button>
+      <label class="import-btn">Import save <input id="import-file" type="file" accept="application/json" hidden></label>
+    </div>
+    <p class="saved-note" id="saved-note">Saved in this browser (localStorage)</p>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+<div id="audit-strip" aria-label="Audit strip"></div>
+<nav id="view-tabs">
+  <button type="button" data-view="guide" class="tab active">Guide &amp; Tracker</button>
+  <button type="button" data-view="roadmap" class="tab">Roadmap</button>
+  <button type="button" data-view="missables" class="tab">Missables &amp; Timeline</button>
+  <button type="button" data-view="sources" class="tab">Sources &amp; Save</button>
+  <label class="spoiler-toggle"><input type="checkbox" id="spoiler-toggle" checked> Hide story spoilers until earned</label>
+</nav>
+<main>
+  <section id="view-guide" class="view">
+    <aside id="checklist-pane">
+      <div class="filters">
+        <input id="search-box" type="search" placeholder="Search trophies…" aria-label="Search trophies">
+        <select id="kind-filter" aria-label="Filter by kind">
+          <option value="all">All kinds</option><option value="story">Story</option>
+          <option value="missable">Missable</option><option value="collectibles">Collectibles</option>
+          <option value="activities">Activities</option><option value="online">Online</option>
+        </select>
+        <select id="grade-filter" aria-label="Filter by grade">
+          <option value="all">All grades</option><option value="platinum">Platinum</option>
+          <option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option>
+        </select>
+        <select id="status-filter" aria-label="Filter by status">
+          <option value="all">All statuses</option><option value="earned">Earned</option><option value="open">Not earned</option>
+        </select>
+      </div>
+      <div id="next-up"></div>
+      <div id="checklist"></div>
+    </aside>
+    <article id="guide-pane"></article>
+    <aside id="register-pane">
+      <h2>Sources</h2>
+      <p class="register-note">Every step in the guide pane cites these by number. Read 2026-11-20.</p>
+      <ol id="source-register"></ol>
+    </aside>
+  </section>
+  <section id="view-roadmap" class="view" hidden></section>
+  <section id="view-missables" class="view" hidden></section>
+  <section id="view-sources" class="view" hidden></section>
+</main>
+<footer>
+  <p>Leonida Night Ledger — an original, unofficial fan guide. Not affiliated with Rockstar Games or PlayStation. No game artwork is used; the look is this guide's own. Guide text is original; facts are cited to the numbered sources.</p>
+</footer>
 <script type="module" src="app.js"></script>
 </body>
 </html>
