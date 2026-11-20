@@ -22,6 +22,12 @@ import { buildDossier } from './vendor/makefun-frontend.ts';
 const here = fileURLToPath(new URL('.', import.meta.url));
 const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
+// Leonida Night Ledger (v3): the entry being handed in is the dark three-pane guide in app/ —
+// 55 cited trophy guides (333 cited steps), a roadmap whose headline claims each carry their
+// citations, a point-of-no-return timeline, and a sources & save view — plus its 4 screenshots.
+const ENTRY_NAME = 'Leonida Night Ledger';
+console.log(`handing in ${ENTRY_NAME}: copying app/ and screenshots/ to ${out}`);
+
 mkdirSync(out, { recursive: true });
 cpSync(join(here, 'app'), join(out, 'app'), { recursive: true });
 mkdirSync(join(out, 'screenshots'), { recursive: true });

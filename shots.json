@@ -1,5 +1,1 @@
-[
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
-]
+[{"file":"1-guide.jpg","path":"/?demo=1#guide","view":"Guide & Tracker: stage checklist, Positive Mental Attitude guide pane with missable and disagreement boxes, short cited answer, cited steps, source register","viewport":{"height":800,"width":1280}},{"file":"2-roadmap.jpg","path":"/?demo=1#roadmap","view":"Roadmap: individually cited headline claims, six stage cards with hours and progress chips, missable watch list, ground rules","viewport":{"height":800,"width":1280}},{"file":"3-missables.jpg","path":"/?demo=1#missables","view":"Missables: point-of-no-return chapter-window timeline, possibly-missable / watch / unconfirmed / sources-disagree boxes, cleared panel","viewport":{"height":800,"width":1280}},{"file":"4-sources.jpg","path":"/?demo=1#sources","view":"Sources & Save: spoiler state, saved-state panel, by-grade and by-kind progress bars, exported save JSON, source registry with independence classes, disagreements register","viewport":{"height":800,"width":1280}}]
